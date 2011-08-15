@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title 人生成就: 记录和跟踪人生经历
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    %warp
+      %header
+        %ul#user-nav
+          %li#site-title 人生成就: 记录和跟踪人生经历
+          - if user_signed_in?
+            %li= current_user.email
+      %sub-nav
+      .page
+        = yield
+      %footer
