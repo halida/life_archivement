@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @category.name %>
+  <br/>
+  <%= @category.desc %>
+  <br/>
+  <%= @category.category if @category.category %>
+</p>
+
+<%= render :partial => "archivements/archivement", :collection => @category.archivements %>
